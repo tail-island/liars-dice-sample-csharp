@@ -6,10 +6,11 @@ namespace HardHead
 {
     public class HardHead
     {
-        public void CheckOtherPrograms(Career[] careers)
-        {
-            ;
-        }
+        //  他のプログラムの性格診断をする場合は、コメントを外してください。
+        //  public void CheckOtherPrograms(Career[] careers)
+        //  {
+        //      ;
+        //  }
 
         public Action Action(Game game)
         {
@@ -50,6 +51,7 @@ namespace HardHead
             return actionCandidates[new Random().Next(actionCandidates.Count())];
         }
 
+        //  終了処理がある場合は、コメントを外してください。
         //  public void GameEnd(Game game)
         //  {
         //      ;
@@ -67,7 +69,8 @@ namespace HardHead
                 switch (commandString)
                 {
                     case "check_other_programs":
-                        CheckOtherPrograms(JsonConvert.DeserializeObject<Career[]>(parameterString));
+                        //  他のプログラムの性格診断をする場合は、コメントを外してください。
+                        //  CheckOtherPrograms(JsonConvert.DeserializeObject<Career[]>(parameterString));
                         Console.WriteLine("OK");
 
                         break;
@@ -79,13 +82,16 @@ namespace HardHead
                         break;
 
                     case "game_end":
-                        // GameEnd(JsonConvert.DeserializeObject<Game>(parameterString));
+                        //  終了処理がある場合は、コメントを外してください。
+                        //  GameEnd(JsonConvert.DeserializeObject<Game>(parameterString));
                         Console.WriteLine("OK");
 
                         break;
 
                     default:
                         terminated = true;
+                        Console.WriteLine("OK");
+
                         break;
                 }
 
