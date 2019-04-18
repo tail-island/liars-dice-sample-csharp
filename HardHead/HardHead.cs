@@ -93,6 +93,7 @@ namespace HardHead
                         break;
 
                     default:
+                        Console.Error.WriteLine(String.Format("invalid command: {}", commandString));
                         break;
                 }
 
