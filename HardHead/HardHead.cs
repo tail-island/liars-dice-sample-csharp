@@ -59,11 +59,15 @@ namespace HardHead
 
         public void Execute()
         {
-            var terminated = false;
-
-            while (!terminated)
+            while (true)
             {
                 var commandString = Console.ReadLine();
+
+                if (commandString == null)
+                {
+                  break;
+                }
+
                 var parameterString = Console.ReadLine();
 
                 switch (commandString)
@@ -89,9 +93,6 @@ namespace HardHead
                         break;
 
                     default:
-                        terminated = true;
-                        Console.WriteLine("OK");
-
                         break;
                 }
 
